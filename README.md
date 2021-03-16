@@ -167,13 +167,83 @@ sudo service jenkins restart
 
 ### 4.Управление Plugins  
 
-asd
+Удобно посмотреть плагины можно здесь:  
+https://plugins.jankins.io
+
+В настройках Manage Jenkins - Manage Plugins - устанавливем эти плагины:
+   Git, Credentials, GreenBalls, ChuckNorris
+   И тутже ниже можно ставить галочку "Restart jenkins после установки плагинов"
+   
+   Для установки старой версии плагина можно выбрать ручную установку и скачать нужноу версию (выбрать с гитхаба)
+   
+   Директория установленных плагинов /var/lib/jenkins/plugins
+   
 
 <a name="simple_job"/>
 
 ### 5.Простейшие jobs, включая Deployment  
 
-asd
+**1. Создаем простой jobs**
+   **Create new jobs** -> указываем имя и выбираем **Freestyle project** -> указываем **Description** -> в **Build** создаем **Jankins Shell**
+   и вводим стандартные команды линукса к примеру echo "Hello'
+   Жмем **SAVE** и в главном окне **Dashboard** справа от нашего job жмем **Выполнить** (зеленую кнопку)
+   Чтобы посмотреть лог - жмем рядом с именем джоба Console output
+
+**2. Создаем полный Jobs:**
+   Наши jobs хранятся в /var/lib/jenkins/jobs
+   Создаем  job **DEPLOY TO TEST** и ставим галочку **Discard of build** (удалять старые билды) и ставим 5 в Max # builds of keeps и Aply SAVE
+   
+   Добавляем **Execute shell**
+   ```
+   echo "------------------------BUILD IS STARTED--------------------"
+   cat <<EOF >index.html
+   <html>
+   <head>
+   <title>Пример 1</title>
+   </head>
+   <body>
+   <H1>Привет!</H1>
+   <P> Это простейший пример HTML-документа. </P>
+   <P> Этот *.html-файл может быть одновременно открыт и в Notepad, и в Netscape. Сохранив изменения в Notepad, просто нажмите кнопку Reload ('перезагрузить') в        Netscape, чтобы увидеть эти изменения реализованными в HTML-документе. </P>
+   </body>
+   </html>
+   EOF
+   echo "------------------------BUILD IS FINISHED--------------------"
+   ```
+   
+   Добавляем второй Execute shell
+   
+   ```
+   echo "------------------------TEST IS STARTED--------------------"
+   result=`grep "Привет!" index.html | wc -l`
+   if [ "$result" = "1" ]
+   then 
+      echo "PASSED"
+   else
+      echo "ERROR"
+      exit 1
+   fi
+   echo "------------------------TEST IS FINISHED--------------------"
+   ```
+   SAVE
+   
+   Доставляем плагин **Publish Over SSH** и идем в **Configure System** - **Publish over SSH** - указываем pub key текстом, **SSH Servers** жмем **Add**, и добавляем 2 сервер (**TEST** и **PRODUCTION**) заполняем все поля и в **Remote Directory** указываем конечную папку **/var/www/html**
+   
+   Возвращаемся в нашу джобу и внизу после **Execution Shell** выбираем в **Post Build Actions** -> **Send build artefacts over ssh** -> выбираем сервер
+   **Source files** - ставим *
+   Exec command - команда после билда указываем **sudo service httpd restart**
+   
+   И добавляем еще один **Post Build Actions** - **ChuckNOrris**
+   
+   **APPLY SAVE**
+   
+   
+   Создаем ВТОРОЙ джоб **DEPLOY TO PRODUCTION** и указываем внизу **Copy from** - **DEPLOY TO TEST** и мы склонируем 
+   И в этой джобе меняем сервер деплоя
+   
+   Если нужно отключить джоб в **PRODUCTION** временно, то в настройках ставим галочку **Disable this job**
+    
+   
 
 <a name="slave_node"/>
 
