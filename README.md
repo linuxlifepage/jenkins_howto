@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 [1.Теория о CI/CD](#theory)
 [2.Установка Jenkins на Ubuntu/Debian](#install) 
 [3.Администрирование Jenkins](#admin)
+
 [4.Управление Plugins](#plugins)
 [5.Простейшие jobs, включая Deployment](#simple_job)
 [6.Добавление Slave Node](#slave_node)
