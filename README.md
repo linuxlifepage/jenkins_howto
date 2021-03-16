@@ -34,10 +34,9 @@ CI - Continuous integration
 CD - Continuous Delivery and Deployment
 
 Это продолжение CI, где уже готовый скомпилированный код (Artifact) деплоится в Staging и Production
-
-
-
-
+  
+  
+  
 <a name="install"/>
 
 ### 2.Установка Jenkins на Ubuntu/Debian  
