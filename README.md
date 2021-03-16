@@ -3,6 +3,7 @@
 https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&index=1
 
 #### Содержание:
+
 [1.Теория о CI/CD](#theory)
 [2.Установка Jenkins на Ubuntu/Debian](#install) 
 [3.Администрирование Jenkins](#admin)
@@ -66,6 +67,6 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 
 
 ##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
+[1.Headers](#headers)  
+[2.Emphasis](#emphasis)  
 
