@@ -60,35 +60,51 @@ asd
 asd
 
 <a name="cli"/>
-### 7.Удаленнои и локальное управление через Jenkins CLI  
+
+### 7.Удаленнои и локальное управление через Jenkins CLI 
+
 asd
 
 <a name="deploy_github"/>
+
 ### 8.Deployments из GitHub  
+
 asd
 
 <a name="automate_run"/>
+
 ### 9.Автоматизация запуска Build Job - Jenkins Build Triggers  
+
 asd
 
 <a name="automate_run_github"/>
+
 ### 10.Автоматизация запуска Build из Github - Jenkins Build Triggers from Github  
+
 asd
 
 <a name="build_parameters"/>
+
 ### 11.Build с параметрами  
+
 asd
 
 <a name="aws_elastic"/>
-### 12.Deploy в AWS Elastic Beanstalk  
+
+### 12.Deploy в AWS Elastic Beanstalk 
+
 asd
 
 <a name="groovy"/>
-### 13.Запуск Groovy Script - Обнуление счетчика Jenkins Build  
+
+### 13.Запуск Groovy Script - Обнуление счетчика Jenkins Build 
+
 asd
 
 <a name="pipeline"/>
-### 14.Основы Jenkins Pipeline и Jenkinsfile  
+
+### 14.Основы Jenkins Pipeline и Jenkinsfile 
+
 asd
 
 
