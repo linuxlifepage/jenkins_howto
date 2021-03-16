@@ -86,7 +86,9 @@ sudo apt-get install jenkins
 ```
 
 3. ПРОВЕРЯЕМ службу после установки:  
+```
 sudo service jenkins status
+```
 
 4. Переходим по адресу:  
 http://your_ip:8080
@@ -98,12 +100,68 @@ cat /var/lib/jenkins...
 ```
 И вставляем пароль в в браузере в Jenkins
 
+6. Выбираем установку с плагинами или же пустой (доставляем потом)
+
+7. Устанавливаем логин и пароль 
+
+
 
 <a name="admin"/>
 
 ### 3.Администрирование Jenkins  
 
-asd
+1. Имя профиля -> Configure
+   Тут можно изменить пароль, информацию, и тд
+   В Description можно поменять описание
+   
+2. Рядом с поиском слева есть уведомление по Warning, которые можно настроить в основных опциях
+
+3. Build Queue
+Очередь ваших jobs
+
+4. Building execution status
+Статус ваших джобов
+
+5. Manage Jenkins - Configure system  
+   \# of executors - количество одновременных процессов, ставим 4  
+   Lables - название сервера (оставляем пустым если не нужно)  
+   Env variables - определить нужные переменные окружения  
+   Administrative monitors - настроить апдейты на уведомления  
+
+6. Configure Global Security:  
+   Disable remember me - ставим галочку, чтобы не запоминало имя последнего логина в систему  
+   Security realm - оставляем по умолчанию хранение данных о пользователях в Jenkins own users database  
+
+7. System Informations - здесь нужно запомнить где находится самый главный запускаемый файл jenkins 
+   ```
+   /usr/share/jenkins/jenkins.war
+   ```  
+   Это нам понадобится потом для обновления
+   
+8. Sytem log - системные логи по дженкинсу
+
+9. Jenkins CLI - полное управление jenkins через командную строку
+
+10. Sctipt Console - пишем скрипты, которые что-то исправляют и меняют в нашем jenkins
+
+11. Manage Node - управление дополнительными нодами (slave). Ноды нужны для обработки сложных джобов как доп сервера.
+
+12.  Manage users - добавить нового пользователя
+    
+Для рестарта сервера Jenkins можно использовать команду:
+http://your_ip:8080/restart
+
+ОБНОВЛЕНИЕ!
+В главом меню Manage Jenkins если показывает есть обновления, то правой кнопкой мыши по ..download.. и копируем ссылку  
+Далее делаем бэкап файла /usr/share/jenkins/jenkins.war и вставляем по ссылке на исходное место
+```
+cd /usr/share/jenkins/ && mv jenkins.war jenkins2.150.1.war && wget https://...jenkins.io/jenkins.war
+sudo service jenkins restart
+```
+
+
+
+
 
 <a name="plugins"/>
 
