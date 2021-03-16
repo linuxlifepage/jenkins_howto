@@ -248,8 +248,45 @@ https://plugins.jankins.io
 <a name="slave_node"/>
 
 ### 6.Добавление Slave Node  
+Преимущества:
+Снизим нагрузку на Master Jenkins. Больше одновременных builds. Build разных платформ на разных серверах.
 
-asd
+1. Устанавливаем Java на Slave свервера
+
+3. Добавляем 2 плагина в Master Jenkins:  
+   SSH Agent - даст возможность ssh-key и username в credentians
+   SSH Slaves - добавляет agents через ssh
+   устанавливаем и рестартуем Jenkins
+   
+3. Добавляем Slave nodes (Management Jenkins -> Managements Nodes)
+   Жмем New Node - называем Node1 и ставим галочку Premanent Agent и жмем ОК
+
+4. В Description - указываем нужное. 
+   Numbers Executors ставим 2, 
+   Remote root Directory выбираем созданную ранее на slave /home/ubuntu/jenkins
+   Labeles - указываем несколько через пробел ubuntu ubuntu_ansible ubuntu18
+   Launch method: Launch agent agents via SSH
+   Host - ip address
+   Credentials - жмем Add и откроется новое окно
+   
+   Kind - SSH username via private keys, добавляем имя пользователя ubuntu и pub ключ и ID для него ОБЯЗАТЕЛЬНО (к примеру ssh-key-california) и в descriptional тоже самое и жмем SAVE
+   
+   Теперь в credential можно выбрать ubuntu...
+   Host key verification Strategy - Manually trusted key Verification Strategi и доп галочку НЕ ставим "Require manual verification..."
+   Avalibility - Keep the agent online....
+   
+   И в последних пунктах можем указать доп Environment Variables ЕСЛИ НУЖНО
+   
+   Жмем SAVE
+   
+   И теперь в логах этой ноды мы можем наблюдать экшины которые происходят сейчас (подключение и тд)
+
+ДОБАВЛЯЕМ еще ноды если нужно (можно склонировать при создании)
+
+Теперь если мы зайдем в настройки любой джобы, то мы можем выбрать НА КАКОЙ НОДЕ она будет отрабатывать
+Ставим галочку Restrict where this project can be run, и тут же предложить выбрать label. И если у нас некоторые лэйблы одинаковые были для других слэйвов, то дженкинс запустит на любом. Если выберем более конкретный лэйбл, то джоба запустится там где конкретно нужно.  
+**ВНИМАНИЕ когда выбираем лейблы - убираем пробелы в конце лейбла!!!**
+
 
 <a name="cli"/>
 
