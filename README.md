@@ -135,9 +135,9 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
    7. System Informations - здесь нужно запомнить где находится самый главный запускаемый файл jenkins 
    
 
-     ``/usr/share/jenkins/jenkins.war``
+     /usr/share/jenkins/jenkins.war
    
-       Это нам понадобится потом для обновления
+  
    
    8. Sytem log - системные логи по дженкинсу
 
