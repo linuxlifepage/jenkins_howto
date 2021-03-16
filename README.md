@@ -45,7 +45,7 @@ CD - Continuous Delivery and Deployment
 Подробнее здесь:
 https://www.jenkins.io/doc/book/installing/linux/
 
-** Для Ubuntu:
+**Для Ubuntu:**
 
 1. Ставим Java 8
 
@@ -63,7 +63,7 @@ sudo apt-get install jenkins
 ```
 
 
-** Для Debian:
+**Для Debian:**
 
 1. Ставим Java 8
 
