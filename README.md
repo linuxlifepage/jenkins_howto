@@ -35,26 +35,57 @@ CD - Continuous Delivery and Deployment
 
 Это продолжение CI, где уже готовый скомпилированный код (Artifact) деплоится в Staging и Production
 
+
+
+
 <a name="install"/>
 
 ### 2.Установка Jenkins на Ubuntu/Debian  
 
-Сначала ставим java 8 версии:
+Подробнее здесь:
+https://www.jenkins.io/doc/book/installing/linux/
 
-Для Ubuntu:
+**Для Ubuntu:
+
+1. Ставим Java 8
 
 ```
 sudo apt update -y && sudo apt install openjdk-8-jdk
 ```
 
-Для Debian:
+2. Устанавливаем Jenkins
 ```
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+
+**Для Debian:
+
+1. Ставим Java 8
+
+```
+sudo apt update -y
+
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 
 sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 
 sudo apt-get update && sudo apt-get install adoptopenjdk-8-hotspot
 ```
+
+2. Устанавливаем Jenkins
+```
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
 
 <a name="admin"/>
 
