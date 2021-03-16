@@ -27,13 +27,34 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 
 ### 1.Теория о CI/CD 
 
-asd
+CI - Continuous integration
+
+Это DevOps модель, в которой разработчики делают Commit кода в Repository и автоматически запускаются Build или компиляция этого кода, после этого запускаются автоматические тесты кода: Unit Test, Integration Test, Functionality Test
+
+CD - Continuous Delivery and Deployment
+
+Это продолжение CI, где уже готовый скомпилированный код (Artifact) деплоится в Staging и Production
 
 <a name="install"/>
 
 ### 2.Установка Jenkins на Ubuntu/Debian  
 
-asd
+Сначала ставим java 8 версии:
+
+Для Ubuntu:
+
+```
+sudo apt update -y && sudo apt install openjdk-8-jdk
+```
+
+Для Debian:
+```
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+
+sudo apt-get update && sudo apt-get install adoptopenjdk-8-hotspot
+```
 
 <a name="admin"/>
 
