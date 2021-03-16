@@ -24,10 +24,12 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 <!--te-->
 
 <a name="headers"/>
-## Headers  
+Headers
+-----
 
 <a name="theory"/>  
-## 1.Теория о CI/CD  
+1.Теория о CI/CD 
+----- 
 
 
 <a name="install"/> 
