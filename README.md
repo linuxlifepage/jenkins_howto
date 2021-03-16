@@ -20,49 +20,49 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 
 
 <a name="headers"/>
-## Headers
+## Headers  
 
 <a name="theory"/>
-## 1.Теория о CI/CD 
+## 1.Теория о CI/CD  
 
 <a name="install"/> 
-## 2.Установка Jenkins на Ubuntu/Debian
+## 2.Установка Jenkins на Ubuntu/Debian  
 
 <a name="admin"/>
-## 3.Администрирование Jenkins
+## 3.Администрирование Jenkins  
 
 <a name="plugins"/>
-## 4.Управление Plugins
+## 4.Управление Plugins  
 
 <a name="simple_job"/>
-## 5.Простейшие jobs, включая Deployment
+## 5.Простейшие jobs, включая Deployment  
 
 <a name="slave_node"/>
-## 6.Добавление Slave Node
+## 6.Добавление Slave Node  
 
 <a name="cli"/>
-## 7.Удаленнои и локальное управление через Jenkins CLI
+## 7.Удаленнои и локальное управление через Jenkins CLI  
 
 <a name="deploy_github"/>
-## 8.Deployments из GitHub
+## 8.Deployments из GitHub  
 
 <a name="automate_run"/>
-## 9.Автоматизация запуска Build Job - Jenkins Build Triggers
+## 9.Автоматизация запуска Build Job - Jenkins Build Triggers  
 
 <a name="automate_run_github"/>
-## 10.Автоматизация запуска Build из Github - Jenkins Build Triggers from Github
+## 10.Автоматизация запуска Build из Github - Jenkins Build Triggers from Github  
 
 <a name="build_parameters"/>
-## 11.Build с параметрами
+## 11.Build с параметрами  
 
 <a name="aws_elastic"/>
-## 12.Deploy в AWS Elastic Beanstalk
+## 12.Deploy в AWS Elastic Beanstalk  
 
 <a name="groovy"/>
-## 13.Запуск Groovy Script - Обнуление счетчика Jenkins Build
+## 13.Запуск Groovy Script - Обнуление счетчика Jenkins Build  
 
 <a name="pipeline"/>
-## 14.Основы Jenkins Pipeline и Jenkinsfile
+## 14.Основы Jenkins Pipeline и Jenkinsfile  
 
 
 
