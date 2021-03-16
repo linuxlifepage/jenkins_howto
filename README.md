@@ -85,6 +85,19 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
+3. ПРОВЕРЯЕМ службу после установки:  
+sudo service jenkins status
+
+4. Переходим по адресу:  
+http://your_ip:8080
+
+5. Активируем Jenkins - копируем адрес файла (/var/lib/jenkins...), 
+В терминале вводим 
+```
+cat /var/lib/jenkins...
+```
+И вставляем пароль в в браузере в Jenkins
+
 
 <a name="admin"/>
 
