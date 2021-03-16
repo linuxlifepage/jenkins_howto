@@ -68,6 +68,4 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 ##### Table of Contents  
 [Headers](#headers)  
 [Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+
