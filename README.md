@@ -24,28 +24,39 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 <!--te-->
 
 <a name="theory"/>
+
 ### 1.Теория о CI/CD 
 
 asd
+
 <a name="install"/>
+
 ### 2.Установка Jenkins на Ubuntu/Debian  
 
 asd
 
 <a name="admin"/>
+
 ### 3.Администрирование Jenkins  
+
 asd
 
 <a name="plugins"/>
+
 ### 4.Управление Plugins  
+
 asd
 
 <a name="simple_job"/>
+
 ### 5.Простейшие jobs, включая Deployment  
+
 asd
 
 <a name="slave_node"/>
+
 ### 6.Добавление Slave Node  
+
 asd
 
 <a name="cli"/>
