@@ -27,13 +27,13 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 
 ### 1.Теория о CI/CD 
 
-CI - Continuous integration
+   CI - Continuous integration
 
-Это DevOps модель, в которой разработчики делают Commit кода в Repository и автоматически запускаются Build или компиляция этого кода, после этого запускаются автоматические тесты кода: Unit Test, Integration Test, Functionality Test
+   Это DevOps модель, в которой разработчики делают Commit кода в Repository и автоматически запускаются Build или компиляция этого кода, после этого запускаются    автоматические тесты кода: Unit Test, Integration Test, Functionality Test
 
-CD - Continuous Delivery and Deployment
+   CD - Continuous Delivery and Deployment
 
-Это продолжение CI, где уже готовый скомпилированный код (Artifact) деплоится в Staging и Production
+   Это продолжение CI, где уже готовый скомпилированный код (Artifact) деплоится в Staging и Production
   
   
   
@@ -41,68 +41,68 @@ CD - Continuous Delivery and Deployment
 
 ### 2.Установка Jenkins на Ubuntu/Debian  
 
-Подробнее здесь:
-https://www.jenkins.io/doc/book/installing/linux/
+   Подробнее здесь:
+   https://www.jenkins.io/doc/book/installing/linux/
 
-**Для Ubuntu:**
+   **Для Ubuntu:**
 
-1. Ставим Java 8
+   1. Ставим Java 8
 
-```
-sudo apt update -y && sudo apt install openjdk-8-jdk
-```
+   ```
+   sudo apt update -y && sudo apt install openjdk-8-jdk
+   ```
 
-2. Устанавливаем Jenkins
-```
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install jenkins
-```
+   2. Устанавливаем Jenkins
+   ```
+   wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+      /etc/apt/sources.list.d/jenkins.list'
+   sudo apt-get update
+   sudo apt-get install jenkins
+   ```
 
 
-**Для Debian:**
+   **Для Debian:**
 
-1. Ставим Java 8
+   1. Ставим Java 8
 
-```
-sudo apt update -y
+   ```
+   sudo apt update -y
 
-wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+   wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 
-sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+   sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 
-sudo apt-get update && sudo apt-get install adoptopenjdk-8-hotspot
-```
+   sudo apt-get update && sudo apt-get install adoptopenjdk-8-hotspot
+   ```
 
-2. Устанавливаем Jenkins
-```
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install jenkins
-```
+   2. Устанавливаем Jenkins
+   ```
+   wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+       /etc/apt/sources.list.d/jenkins.list'
+   sudo apt-get update
+   sudo apt-get install jenkins
+   ```
 
-3. ПРОВЕРЯЕМ службу после установки:  
-```
-sudo service jenkins status
-```
+   3. ПРОВЕРЯЕМ службу после установки:  
+   ```
+   sudo service jenkins status
+   ```
 
-4. Переходим по адресу:  
-http://your_ip:8080
+   4. Переходим по адресу:  
+   http://your_ip:8080
 
-5. Активируем Jenkins - копируем адрес файла (/var/lib/jenkins...), 
-В терминале вводим 
-```
-cat /var/lib/jenkins...
-```
-И вставляем пароль в в браузере в Jenkins
+   5. Активируем Jenkins - копируем адрес файла (/var/lib/jenkins...), 
+   В терминале вводим 
+   ```
+   cat /var/lib/jenkins...
+   ```
+   И вставляем пароль в в браузере в Jenkins
 
-6. Выбираем установку с плагинами или же пустой (доставляем потом)
+   6. Выбираем установку с плагинами или же пустой (доставляем потом)
 
-7. Устанавливаем логин и пароль 
+   7. Устанавливаем логин и пароль 
 
 
 
@@ -110,54 +110,55 @@ cat /var/lib/jenkins...
 
 ### 3.Администрирование Jenkins  
 
-1. Имя профиля -> Configure
-   Тут можно изменить пароль, информацию, и тд
-   В Description можно поменять описание
+   1. Имя профиля -> Configure
+      Тут можно изменить пароль, информацию, и тд
+      В Description можно поменять описание
    
-2. Рядом с поиском слева есть уведомление по Warning, которые можно настроить в основных опциях
+   2. Рядом с поиском слева есть уведомление по Warning, которые можно настроить в основных опциях
 
-3. Build Queue
-Очередь ваших jobs
+   3. Build Queue
+   Очередь ваших jobs
 
-4. Building execution status
-Статус ваших джобов
+   4. Building execution status
+   Статус ваших джобов
 
-5. Manage Jenkins - Configure system  
-   \# of executors - количество одновременных процессов, ставим 4  
-   Lables - название сервера (оставляем пустым если не нужно)  
-   Env variables - определить нужные переменные окружения  
-   Administrative monitors - настроить апдейты на уведомления  
+   5. Manage Jenkins - Configure system  
+     \# of executors - количество одновременных процессов, ставим 4  
+     Lables - название сервера (оставляем пустым если не нужно)  
+     Env variables - определить нужные переменные окружения  
+     Administrative monitors - настроить апдейты на уведомления  
 
-6. Configure Global Security:  
-   Disable remember me - ставим галочку, чтобы не запоминало имя последнего логина в систему  
-   Security realm - оставляем по умолчанию хранение данных о пользователях в Jenkins own users database  
+   6. Configure Global Security:  
+      Disable remember me - ставим галочку, чтобы не запоминало имя последнего логина в систему  
+     Security realm - оставляем по умолчанию хранение данных о пользователях в Jenkins own users database  
 
-7. System Informations - здесь нужно запомнить где находится самый главный запускаемый файл jenkins 
-   ```
-   /usr/share/jenkins/jenkins.war
-   ```  
-   Это нам понадобится потом для обновления
+   7. System Informations - здесь нужно запомнить где находится самый главный запускаемый файл jenkins 
    
-8. Sytem log - системные логи по дженкинсу
 
-9. Jenkins CLI - полное управление jenkins через командную строку
+     ``/usr/share/jenkins/jenkins.war``
+   
+       Это нам понадобится потом для обновления
+   
+   8. Sytem log - системные логи по дженкинсу
 
-10. Sctipt Console - пишем скрипты, которые что-то исправляют и меняют в нашем jenkins
+   9. Jenkins CLI - полное управление jenkins через командную строку
 
-11. Manage Node - управление дополнительными нодами (slave). Ноды нужны для обработки сложных джобов как доп сервера.
+   10. Sctipt Console - пишем скрипты, которые что-то исправляют и меняют в нашем jenkins
 
-12.  Manage users - добавить нового пользователя
+   11. Manage Node - управление дополнительными нодами (slave). Ноды нужны для обработки сложных джобов как доп сервера.
+
+   12.  Manage users - добавить нового пользователя
     
-Для рестарта сервера Jenkins можно использовать команду:
-http://your_ip:8080/restart
+   Для рестарта сервера Jenkins можно использовать команду:
+   http://your_ip:8080/restart
 
-ОБНОВЛЕНИЕ!
-В главом меню Manage Jenkins если показывает есть обновления, то правой кнопкой мыши по ..download.. и копируем ссылку  
-Далее делаем бэкап файла /usr/share/jenkins/jenkins.war и вставляем по ссылке на исходное место
-```
-cd /usr/share/jenkins/ && mv jenkins.war jenkins2.150.1.war && wget https://...jenkins.io/jenkins.war
-sudo service jenkins restart
-```
+   ОБНОВЛЕНИЕ!
+   В главом меню Manage Jenkins если показывает есть обновления, то правой кнопкой мыши по ..download.. и копируем ссылку  
+   Далее делаем бэкап файла /usr/share/jenkins/jenkins.war и вставляем по ссылке на исходное место
+   ```
+   cd /usr/share/jenkins/ && mv jenkins.war jenkins2.150.1.war && wget https://...jenkins.io/jenkins.war
+   sudo service jenkins restart
+   ```
 
 
 
@@ -167,16 +168,16 @@ sudo service jenkins restart
 
 ### 4.Управление Plugins  
 
-Удобно посмотреть плагины можно здесь:  
-https://plugins.jankins.io
+   Удобно посмотреть плагины можно здесь:  
+   https://plugins.jankins.io
 
-В настройках Manage Jenkins - Manage Plugins - устанавливем эти плагины:
-   Git, Credentials, GreenBalls, ChuckNorris
-   И тутже ниже можно ставить галочку "Restart jenkins после установки плагинов"
+   В настройках Manage Jenkins - Manage Plugins - устанавливем эти плагины:
+      Git, Credentials, GreenBalls, ChuckNorris
+      И тутже ниже можно ставить галочку "Restart jenkins после установки плагинов"
+      
+      Для установки старой версии плагина можно выбрать ручную установку и скачать нужноу версию (выбрать с гитхаба)
    
-   Для установки старой версии плагина можно выбрать ручную установку и скачать нужноу версию (выбрать с гитхаба)
-   
-   Директория установленных плагинов /var/lib/jenkins/plugins
+    Директория установленных плагинов /var/lib/jenkins/plugins
    
 
 <a name="simple_job"/>
