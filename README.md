@@ -2,6 +2,11 @@
 
 https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&index=1
 
+
+##### Table of Contents  
+[1.Headers](#headers)  
+[2.Emphasis](#emphasis)
+
 #### Содержание:
 
 [1.Теория о CI/CD](#theory)
@@ -66,7 +71,5 @@ https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE
 
 
 
-##### Table of Contents  
-[1.Headers](#headers)  
-[2.Emphasis](#emphasis)  
+  
 
